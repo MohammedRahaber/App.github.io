@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devops</title>
+    <style> 
+    header {
+        background-color: greenyellow;
+        font-weight: bolder;
+        font-size: 50pt
+    }
+        </style>
+</head>
+<body>
+   <header>
+ To-do-list
+   </header>
+
+   <div class="container">
+       <h1>Add Items</h1>
+       <form onsubmit="getItems(event)">
+           <input type="text" name="item">
+           <input type="submit" value="add">
+       </form>
+<ul>
+    <li>item-1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+</ul>
+
+   </div>
+
+<script>
+    function getItems(e){
+        e.preventDefault()
+var form=new FormData(e.target);
+console.log(form.get('item'))
+
+    }
+</script>
+</body>
+</html>
